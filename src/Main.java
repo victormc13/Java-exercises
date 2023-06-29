@@ -4,15 +4,17 @@ public class Main {
 
     public static void main(String[] args) {
         Coche miCoche = new Coche();
-        miCoche.agregarPuertas();
-        System.out.println(miCoche.puertas);
+
+        miCoche.agregarPuerta();
+
+        System.out.println("Cantidad de puertas de mi coche: " + miCoche.cantidadDePuertas);
     }
 }
 
 class Coche {
-    public int puertas = 4;
+    public int cantidadDePuertas = 4;
 
-    public void agregarPuertas() {
-        this.puertas++;
+    public void agregarPuerta() {
+        this.cantidadDePuertas++;
     }
 }
