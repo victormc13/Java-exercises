@@ -22,5 +22,14 @@ public class Main {
             numeroWhile++;
             System.out.println("Ahora el valor de la variable numeroWhile es: " + numeroWhile);
         }
+
+
+        //Do-While statement
+        int numeroDoWhile = 3;
+        //Al no cumplir con la condición entra una sola vez al bucle
+        do {
+            numeroDoWhile++;
+            System.out.println("Ahora el valor de la variable numeroDoWhile es: " + numeroDoWhile);
+        } while (numeroDoWhile < 3);
     }
 }
