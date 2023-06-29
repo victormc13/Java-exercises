@@ -31,5 +31,11 @@ public class Main {
             numeroDoWhile++;
             System.out.println("Ahora el valor de la variable numeroDoWhile es: " + numeroDoWhile);
         } while (numeroDoWhile < 3);
+
+
+        //for statement
+        for (int numeroFor = 0; numeroFor <= 3; numeroFor++) {
+            System.out.println("El valor de la variable numeroFor es: " + numeroFor);
+        }
     }
 }
