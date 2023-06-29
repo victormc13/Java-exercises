@@ -13,5 +13,14 @@ public class Main {
         } else {
             System.out.println("La variable numeroIf es 0");
         }
+
+
+        //While statement
+        int numeroWhile = 1;
+
+        while (numeroWhile < 3) {
+            numeroWhile++;
+            System.out.println("Ahora el valor de la variable numeroWhile es: " + numeroWhile);
+        }
     }
 }
