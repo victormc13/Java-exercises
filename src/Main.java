@@ -3,18 +3,15 @@
 public class Main {
 
     public static void main(String[] args) {
-        Coche miCoche = new Coche();
+        //if, else-if, else statements
+        int numeroIf = 13;
 
-        miCoche.agregarPuerta();
-
-        System.out.println("La cantidad de puertas es: " + miCoche.cantidadDePuertas);
-    }
-}
-
-class Coche {
-    public int cantidadDePuertas = 4;
-
-    public void agregarPuerta() {
-        this.cantidadDePuertas++;
+        if (numeroIf > 0) {
+            System.out.println("La variable numeroIf " + numeroIf + " es positivo");
+        } else if (numeroIf < 0) {
+            System.out.println("La variable numeroIf " + numeroIf + " es negativo");
+        } else {
+            System.out.println("La variable numeroIf es 0");
+        }
     }
 }
