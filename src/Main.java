@@ -3,16 +3,11 @@
 public class Main {
 
     public static void main(String[] args) {
-        Coche miCoche = new Coche();
-        miCoche.agregarPuertas();
-        System.out.println(miCoche.puertas);
+        var result = suma(10, 20 , 30);
+        System.out.print(result);
     }
-}
 
-class Coche {
-    public int puertas = 4;
-
-    public void agregarPuertas() {
-        this.puertas++;
+    public static int suma(int a, int b, int c) {
+        return a + b + c;
     }
 }
