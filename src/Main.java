@@ -7,7 +7,7 @@ public class Main {
 
         miCoche.agregarPuerta();
 
-        System.out.println("Cantidad de puertas de mi coche: " + miCoche.cantidadDePuertas);
+        System.out.println("La cantidad de puertas es: " + miCoche.cantidadDePuertas);
     }
 }
 
