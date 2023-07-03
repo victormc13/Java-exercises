@@ -33,7 +33,7 @@ class Person {
 class Client extends Person {
     double credit;
 
-    
+
     public boolean hired() {
         return false;
     }
