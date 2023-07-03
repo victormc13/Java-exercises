@@ -8,16 +8,18 @@ public class Main {
         client.age = 23;
         client.phone = 931928801;
         client.credit = 1312.99;
-        System.out.println("My name is " + client.name + ". I'm " + client.age + " years old " + "with phone " + client.phone
+        System.out.print("My name is " + client.name + ". I'm " + client.age + " years old " + "with phone " + client.phone
                 + " and my available credit is " + client.credit + "$");
+        System.out.println(" Is hired?: " + client.hired());
 
         Employee employee = new Employee();
         employee.name = "Alfred";
         employee.age = 26;
         employee.phone = 5053822;
         employee.salary = 20000;
-        System.out.println("My name is " + employee.name + ". I'm " + employee.age + " years old " + "with phone " + employee.phone
+        System.out.print("My name is " + employee.name + ". I'm " + employee.age + " years old " + "with phone " + employee.phone
                 + " and my current salary is " + employee.salary + "$");
+        System.out.println(" Is hired?: " + employee.hired());
     }
 }
 
@@ -27,10 +29,21 @@ class Person {
     long phone;
 }
 
+
 class Client extends Person {
     double credit;
+
+    
+    public boolean hired() {
+        return false;
+    }
 }
 
 class Employee extends Person {
     double salary;
+
+
+    public boolean hired() {
+        return true;
+    }
 }
