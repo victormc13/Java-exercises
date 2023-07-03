@@ -8,7 +8,16 @@ public class Main {
         client.age = 23;
         client.phone = 931928801;
         client.credit = 1312.99;
-        System.out.println("My name is " + client.name + ". I'm " + client.age + " years old " + "with phone " + client.phone + " and my currently credit is " + client.credit + "$");
+        System.out.println("My name is " + client.name + ". I'm " + client.age + " years old " + "with phone " + client.phone
+                + " and my available credit is " + client.credit + "$");
+
+        Employee employee = new Employee();
+        employee.name = "Alfred";
+        employee.age = 26;
+        employee.phone = 5053822;
+        employee.salary = 20000;
+        System.out.println("My name is " + employee.name + ". I'm " + employee.age + " years old " + "with phone " + employee.phone
+                + " and my current salary is " + employee.salary + "$");
     }
 }
 
@@ -20,4 +29,8 @@ class Person {
 
 class Client extends Person {
     double credit;
+}
+
+class Employee extends Person {
+    double salary;
 }
