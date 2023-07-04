@@ -3,47 +3,41 @@
 public class Main {
 
     public static void main(String[] args) {
-        Client client = new Client();
-        client.name = "Victor";
-        client.age = 23;
-        client.phone = 931928801;
-        client.credit = 1312.99;
-        System.out.print("My name is " + client.name + ". I'm " + client.age + " years old " + "with phone " + client.phone
-                + " and my available credit is " + client.credit + "$");
-        System.out.println(" Is hired?: " + client.hired());
+        Car mycar = new Car();
+        Motorcycle moto = new Motorcycle();
+        RunSpeedUp(mycar);
+        RunSpeedUp(moto);
+        SlowDown(mycar);
+        SlowDown(moto);
+    }
+    public static void RunSpeedUp (Vehicle vehicle) {
+        vehicle.SpeedUp(15);
+    }
 
-        Employee employee = new Employee();
-        employee.name = "Alfred";
-        employee.age = 26;
-        employee.phone = 5053822;
-        employee.salary = 20000;
-        System.out.print("My name is " + employee.name + ". I'm " + employee.age + " years old " + "with phone " + employee.phone
-                + " and my current salary is " + employee.salary + "$");
-        System.out.println(" Is hired?: " + employee.hired());
+    public static void SlowDown (Vehicle vehicle) {
+        vehicle.SlowDown(5);
     }
 }
 
-class Person {
-    String name;
-    int age;
-    long phone;
+interface Vehicle {
+    void SpeedUp(int velocity);
+    void SlowDown(int velocity);
 }
 
-
-class Client extends Person {
-    double credit;
-
-
-    public boolean hired() {
-        return false;
+class Car implements Vehicle {
+    public void SpeedUp(int velocity) {
+        System.out.println("Car() ---> SpeedUp()");
+    }
+    public void SlowDown(int velocity) {
+        System.out.println("Car() ---> SlowDown()");
     }
 }
 
-class Employee extends Person {
-    double salary;
-
-
-    public boolean hired() {
-        return true;
+class Motorcycle implements Vehicle {
+    public void SpeedUp(int velocity) {
+        System.out.println("Moto(RMMM) ---> SpeedUp()");
+    }
+    public void SlowDown(int velocity) {
+        System.out.println("Moto() ---> SlowDown()");
     }
 }
