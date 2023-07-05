@@ -3,45 +3,38 @@
 public class Main {
 
     public static void main(String[] args) {
-        Car mycar = new Car();
-
-        //by reference
-        changeVelocity(mycar);
-        changeVelocity(mycar);
-        changeVelocity(mycar);
-        changeVelocity(mycar);
-        System.out.println(mycar.velocity);
-
-
-        //by value
-        int valA = 5;
-        int valB = 15;
-        System.out.println(suma(valA, valB));//generate copy of original values
+        suma(10, 20);
+        System.out.println("The factorial of your number is: " + factorial(5));
     }
 
-    public static void changeVelocity(Car car) { //parameters by reference
-        car.velocity += 15;
+    public static void suma(int a, int b) { //Recursive function (Always check the behavior of the statements)
+        var temp = a + b;
+        System.out.println(temp);
+
+        if (b >= 90) { // If we don't set a condition here.... It will break the code in a loop
+            return;
+        }
+
+        suma(a, temp);
     }
 
-    public static int suma(int a, int b) { //parameters by value
-        return a + b;
-    }
-}
-
-interface Vehicle {
-    void SpeedUp(int quantity);
-
-    void SlowDown(int quantity);
-}
-
-class Car implements Vehicle {
-    int velocity = 0;
-
-    public void SpeedUp(int quantity) {
-        System.out.println("Car() --> SpeedUp");
+    public static int factorial(int number) { //Recursive function
+        int result;
+        if (number == 1) {
+            return 1;
+        }
+        result = factorial(number - 1) * number;
+        return result;
     }
 
-    public void SlowDown(int quantity) {
-        System.out.println("Car() --> SpeedUp");
+    public static int factorialNR(int number) { //No Recursive function
+        int temp;
+        int result = 1;
+
+        for (temp = 1; temp <= number; temp++) {
+            result = result * temp;
+        }
+
+        return result;
     }
 }
