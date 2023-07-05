@@ -4,40 +4,36 @@ public class Main {
 
     public static void main(String[] args) {
         Car mycar = new Car();
-        Motorcycle moto = new Motorcycle();
-        RunSpeedUp(mycar);
-        RunSpeedUp(moto);
-        SlowDown(mycar);
-        SlowDown(moto);
-    }
-    public static void RunSpeedUp (Vehicle vehicle) {
-        vehicle.SpeedUp(15);
+
+        changeVelocity(mycar);
+        changeVelocity(mycar);
+        changeVelocity(mycar);
+        changeVelocity(mycar);
+
+        System.out.println(mycar.velocity);
     }
 
-    public static void SlowDown (Vehicle vehicle) {
-        vehicle.SlowDown(5);
+    public static void changeVelocity(Car car) { //parameters by reference
+        car.velocity += 15;
+    }
+
+    public static int suma(int a, int b) { //parameters by valor
+        return a + b;
     }
 }
 
 interface Vehicle {
-    void SpeedUp(int velocity);
-    void SlowDown(int velocity);
+    void SpeedUp(int quantity);
+    void SlowDown(int quantity);
 }
-
 class Car implements Vehicle {
-    public void SpeedUp(int velocity) {
-        System.out.println("Car() ---> SpeedUp()");
-    }
-    public void SlowDown(int velocity) {
-        System.out.println("Car() ---> SlowDown()");
-    }
-}
+    int velocity = 0;
 
-class Motorcycle implements Vehicle {
-    public void SpeedUp(int velocity) {
-        System.out.println("Moto(RMMM) ---> SpeedUp()");
+    public void SpeedUp(int quantity) {
+        System.out.println("Car() --> SpeedUp");
     }
-    public void SlowDown(int velocity) {
-        System.out.println("Moto() ---> SlowDown()");
+
+    public void SlowDown(int quantity) {
+        System.out.println("Car() --> SpeedUp");
     }
 }
