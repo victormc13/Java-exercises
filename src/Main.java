@@ -5,19 +5,25 @@ public class Main {
     public static void main(String[] args) {
         Car mycar = new Car();
 
+        //by reference
         changeVelocity(mycar);
         changeVelocity(mycar);
         changeVelocity(mycar);
         changeVelocity(mycar);
-
         System.out.println(mycar.velocity);
+
+
+        //by value
+        int valA = 5;
+        int valB = 15;
+        System.out.println(suma(valA, valB));//generate copy of original values
     }
 
     public static void changeVelocity(Car car) { //parameters by reference
         car.velocity += 15;
     }
 
-    public static int suma(int a, int b) { //parameters by valor
+    public static int suma(int a, int b) { //parameters by value
         return a + b;
     }
 }
