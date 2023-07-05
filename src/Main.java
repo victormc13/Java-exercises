@@ -5,6 +5,7 @@ public class Main {
     public static void main(String[] args) {
         suma(10, 20);
         System.out.println("The factorial of your number is: " + factorial(5));
+        System.out.println("The factorial(notRecursive) of your number is: " + factorialNR(2));
     }
 
     public static void suma(int a, int b) { //Recursive function (Always check the behavior of the statements)
@@ -27,7 +28,7 @@ public class Main {
         return result;
     }
 
-    public static int factorialNR(int number) { //No Recursive function
+    public static int factorialNR(int number) { //No Recursive function (Less usefully and not readable code)
         int temp;
         int result = 1;
 
