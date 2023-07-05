@@ -30,8 +30,10 @@ public class Main {
 
 interface Vehicle {
     void SpeedUp(int quantity);
+
     void SlowDown(int quantity);
 }
+
 class Car implements Vehicle {
     int velocity = 0;
 
